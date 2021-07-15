@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "d58c72fd-e136-42d6-827b-8eac23bcb4df",
+		"name": "Octopus_Interview_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " { \"username\": \"admin\", \"item_id\": \"390\", \"price\": 3.14 }"
+				},
+				"url": {
+					"raw": "http://localhost:8899/v1/item/set",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"v1",
+						"item",
+						"set"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateinventory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\": \"admin\", \"item_id\": \"390\", \"add\": 10 }"
+				},
+				"url": {
+					"raw": "http://localhost:8899/v1/inventory/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"v1",
+						"inventory",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getinventory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"username\": \"admin\", \"items\": [ { \"item_id\": \"390\"}, { \"item_id\": \"36349\"} ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8899/v1/inventory/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"v1",
+						"inventory",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCartItem",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\": \"mike\", \"item_id\": \"390\", \"quantity\": 2 }"
+				},
+				"url": {
+					"raw": "http://localhost:8899/v1/cart/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"v1",
+						"cart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeCartItem",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\": \"mike\", \"item_id\": \"390\" }"
+				},
+				"url": {
+					"raw": "http://localhost:8899/v1/cart/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"v1",
+						"cart",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
